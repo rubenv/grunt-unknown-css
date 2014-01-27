@@ -19,3 +19,4 @@ describe 'HTML Parser', ->
         classes = htmlParse.getClasses(html)
         assert.deepEqual(classes, ['bodyclass', 'class1', 'class2', 'htmlclass'])
 
+    it 'Recognizes classes in Angular.JS ng-class'
