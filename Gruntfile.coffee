@@ -2,6 +2,7 @@ module.exports = (grunt) ->
     @loadNpmTasks('grunt-contrib-jshint')
     @loadNpmTasks('grunt-contrib-watch')
     @loadNpmTasks('grunt-mocha-cli')
+    @loadNpmTasks('grunt-release')
 
     @loadTasks('tasks')
 
