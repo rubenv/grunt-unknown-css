@@ -80,6 +80,16 @@ describe 'CSS Parser', ->
         classes = cssParse.getClasses(css)
         assert.deepEqual(classes, [])
 
+    it 'Handles *', ->
+        css = """
+        * {
+            color: red;
+        }
+        """
+
+        classes = cssParse.getClasses(css)
+        assert.deepEqual(classes, [])
+
     describe 'Class extractor', ->
         it '.test', ->
             assert.deepEqual(cssParse.extractClasses('.test'), ['test'])
