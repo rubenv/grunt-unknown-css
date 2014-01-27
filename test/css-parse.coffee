@@ -61,6 +61,25 @@ describe 'CSS Parser', ->
         classes = cssParse.getClasses(css)
         assert.deepEqual(classes, ['aaa', 'zzz'])
 
+    it 'Handles comments', ->
+        css = """
+        /* Test */
+        """
+
+        classes = cssParse.getClasses(css)
+        assert.deepEqual(classes, [])
+
+    it 'Handles fonts', ->
+        css = """
+        @font-face {
+          font-family: 'OTF Font Regular';
+          src: url("../document-assets/fonts/minionpro/MinionPro-Regular.otf") format("opentype");
+        }
+        """
+
+        classes = cssParse.getClasses(css)
+        assert.deepEqual(classes, [])
+
     describe 'Class extractor', ->
         it '.test', ->
             assert.deepEqual(cssParse.extractClasses('.test'), ['test'])
