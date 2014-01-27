@@ -1,0 +1,51 @@
+{
+  "name": "grunt-unknown-css",
+  "description": "Detect undeclared CSS classes in your HTML.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Ruben Vermeersch",
+    "email": "ruben@rocketeer.be",
+    "url": "http://rocketeer.be"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rubenv/grunt-unknown-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubenv/grunt-unkonwn-css/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/rubenv/grunt-unkonwn-css/blob/master/LICENSE"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-mocha-cli": "~1.0.6",
+    "grunt-release": "~0.4.0",
+    "coffee-script": "~1.6.3",
+    "grunt-contrib-jshint": "~0.7.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin",
+    "css",
+    "html"
+  ],
+  "dependencies": {
+    "css-parse": "~1.7.0",
+    "css-selector-parser": "~1.0.3",
+    "cheerio": "~0.13.1"
+  }
+}

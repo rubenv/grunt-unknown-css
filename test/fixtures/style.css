@@ -1,0 +1,11 @@
+html.htmlclass {
+    color: red;
+}
+
+.class2 {
+    color: red;
+}
+
+body.bodyclass > .class1 {
+    color: blue;
+}
