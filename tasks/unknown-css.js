@@ -9,6 +9,10 @@ var arrayDifference = util.arrayDifference;
 
 module.exports = function (grunt) {
     grunt.registerMultiTask('unknown_css', 'Detect undeclared CSS classes in your HTML.', function () {
+        var options = this.options({
+            whitelist: []
+        });
+
         var cssNames = [];
         var htmlNames = [];
 
@@ -36,8 +40,9 @@ module.exports = function (grunt) {
         });
 
         var useless = arrayDifference(htmlNames, cssNames);
-        if (useless.length > 0) {
-            grunt.fail.warn("Undefined CSS classes: " + useless.join(", ") + ".");
+        var remaining = arrayDifference(useless, options.whitelist);
+        if (remaining.length > 0) {
+            grunt.fail.warn("Undefined CSS classes: " + remaining.join(", ") + ".");
         }
     });
 };
