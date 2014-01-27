@@ -41,6 +41,8 @@ module.exports = function (grunt) {
 
         var useless = arrayDifference(htmlNames, cssNames);
         var remaining = arrayDifference(useless, options.whitelist);
+
+        remaining.sort();
         if (remaining.length > 0) {
             grunt.fail.warn("Undefined CSS classes: " + remaining.join(", ") + ".");
         }
