@@ -102,6 +102,12 @@ describe 'CSS Parser', ->
         classes = cssParse.getClasses(css)
         assert.deepEqual(classes, ['test'])
 
+    it 'Handles minified CSS', ->
+        css = """@charset "UTF-8";.red{color:red}"""
+
+        classes = cssParse.getClasses(css)
+        assert.deepEqual(classes, ['red'])
+
     describe 'Class extractor', ->
         it '.test', ->
             assert.deepEqual(cssParse.extractClasses('.test'), ['test'])
