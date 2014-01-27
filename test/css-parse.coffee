@@ -90,6 +90,18 @@ describe 'CSS Parser', ->
         classes = cssParse.getClasses(css)
         assert.deepEqual(classes, [])
 
+    it 'Handles media queries', ->
+        css = """
+        @media (min-width: 768px) {
+            .test {
+                color: red;
+            }
+        }
+        """
+
+        classes = cssParse.getClasses(css)
+        assert.deepEqual(classes, ['test'])
+
     describe 'Class extractor', ->
         it '.test', ->
             assert.deepEqual(cssParse.extractClasses('.test'), ['test'])
