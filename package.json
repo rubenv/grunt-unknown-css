@@ -1,7 +1,7 @@
 {
   "name": "grunt-unknown-css",
   "description": "Detect undeclared CSS classes in your HTML.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": {
     "name": "Ruben Vermeersch",
     "email": "ruben@rocketeer.be",
