@@ -50,7 +50,7 @@ This will parse all the class names from the css files in the `css` folder and m
 
 #### options.whitelist
 Type: `Array`
-Default value: `'[]'`
+Default value: `[]`
 
 A set of class names that should be allowed, even though they don't exist in the CSS files. You can also supply regexes here.
 
