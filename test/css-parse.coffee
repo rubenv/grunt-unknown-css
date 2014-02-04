@@ -108,6 +108,12 @@ describe 'CSS Parser', ->
         classes = cssParse.getClasses(css)
         assert.deepEqual(classes, ['red'])
 
+    it 'Handles MS viewport rule', ->
+        css = """@-ms-viewport { width: device-width }"""
+
+        classes = cssParse.getClasses(css)
+        assert.deepEqual(classes, [])
+
     describe 'Class extractor', ->
         it '.test', ->
             assert.deepEqual(cssParse.extractClasses('.test'), ['test'])
