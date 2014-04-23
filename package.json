@@ -28,12 +28,12 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.1",
-    "grunt-mocha-cli": "~1.0.6",
-    "grunt-release": "~0.4.0",
-    "coffee-script": "~1.6.3",
-    "grunt-contrib-jshint": "~0.7.2"
+    "coffee-script": "~1.7.1",
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-mocha-cli": "~1.8.0",
+    "grunt-release": "~0.7.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
@@ -46,6 +46,6 @@
   "dependencies": {
     "css-parse": "~1.7.0",
     "css-selector-parser": "~1.0.3",
-    "cheerio": "~0.13.1"
+    "cheerio": "~0.15.0"
   }
 }
